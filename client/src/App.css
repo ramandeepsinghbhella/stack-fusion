@@ -1,0 +1,33 @@
+.form-wrapper{
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  margin: 5rem auto;
+  gap: .5rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 1.5px solid black;
+  width: 40%;
+}
+.form-wrapper h1{
+  width: fit-content;
+  margin: 0 auto;
+}
+.form-wrapper .message{
+  background: #CE7428;
+  padding: 1rem;
+  border-radius: 1rem;
+  color: white;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 40%;
+  left: 40%;
+  gap: 1rem;
+}
+
+.form-wrapper .message Button{
+  width: fit-content;
+  background: white;
+}
