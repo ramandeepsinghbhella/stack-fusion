@@ -1,9 +1,11 @@
 const express = require('express');
 const mongoose = require("mongoose");
+const path = require('path');
 const validatePhoneNumber = require('validate-phone-number-node-js');
 const cors = require('cors');
 const { response } = require('express');
 const { sendEmail } = require('./sendEmail');
+const exp = require('constants');
 const app = express();
 require("dotenv").config(); 
 mongoose.connect(
@@ -15,6 +17,11 @@ mongoose.connect(
 );
 app.use(cors());
 app.use(express.json());
+app.use(express.static(path.join(__dirname, '../client/build')));
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/build/index.html'))
+})
 
 const userSchema = new mongoose.Schema({
     name: {
