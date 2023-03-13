@@ -1,11 +1,11 @@
 const express = require('express');
 const mongoose = require("mongoose");
-const path = require('path');
+// const path = require('path');
 const validatePhoneNumber = require('validate-phone-number-node-js');
 const cors = require('cors');
-const { response } = require('express');
+// const { response } = require('express');
 const { sendEmail } = require('./sendEmail');
-const exp = require('constants');
+// const exp = require('constants');
 const app = express();
 require("dotenv").config(); 
 mongoose.connect(
@@ -17,11 +17,11 @@ mongoose.connect(
 );
 app.use(cors());
 app.use(express.json());
-app.use(express.static(path.join(__dirname, '../client/build')));
+// app.use(express.static(path.join(__dirname, '../client/build')));
 
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../client/build/index.html'))
-})
+// app.get('*', (req, res) => {
+//     res.sendFile(path.join(__dirname, '../client/build/index.html'))
+// })
 
 const userSchema = new mongoose.Schema({
     name: {
@@ -81,7 +81,7 @@ app.post('/form-user', (req, res) => {
 
 
 
-const PORT = process.env.PORT || 8000;
-app.listen(PORT, () => {
+// const PORT = process.env.PORT || 8000;
+app.listen(8000, () => {
     console.log(`Server is running on port 8000.`);
   });

@@ -1,0 +1,19 @@
+.all-users-wrapper{
+    background-color: #ead153;
+    margin: auto;
+}
+.all-users{
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+.user-data{
+    background: red;
+    margin: 1rem;
+    color: white;
+    border-radius: 1rem;
+    overflow-x: hidden;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
